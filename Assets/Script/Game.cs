@@ -246,7 +246,6 @@ public class Game : MonoBehaviour
 
                         if (symetricMode)
                         {
-                            // On enroule dans la zone visible [MARGIN, MARGIN + visible)
                             nx = MARGIN + ((nx - MARGIN) % visibleWidth + visibleWidth) % visibleWidth;
                             ny = MARGIN + ((ny - MARGIN) % visibleHeight + visibleHeight) % visibleHeight;
                         }
@@ -298,7 +297,7 @@ public class Game : MonoBehaviour
             name = "save_" + System.DateTime.Now.ToString("yyyyMMdd_HHmmss");
 
         SaveToPng(name + ".png");
-        RefreshSaveList(name); // met à jour la liste et sélectionne la nouvelle save
+        RefreshSaveList(name);
     }
 
     public void LoadGridButton()
@@ -328,7 +327,7 @@ public class Game : MonoBehaviour
         if (Directory.Exists(SavePath))
         {
             var files = new List<string>(Directory.GetFiles(SavePath, "*.png"));
-            // plus récentes en premier
+            // most recent in first
             files.Sort((a, b) => File.GetLastWriteTime(b).CompareTo(File.GetLastWriteTime(a)));
             foreach (string f in files)
                 names.Add(Path.GetFileNameWithoutExtension(f));
@@ -399,7 +398,6 @@ public class Game : MonoBehaviour
         int imgW = tex.width, imgH = tex.height;
         Destroy(tex);
 
-        // Redimensionne la grille à la taille de l'image (mêmes limites que ApplyGridSize)
         ResizeGrid(Mathf.Clamp(imgW, 4, 200), Mathf.Clamp(imgH, 4, 200));
 
         for (int y = 0; y < visibleHeight; y++)
