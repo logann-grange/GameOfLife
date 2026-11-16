@@ -8,7 +8,7 @@ Implémentation du **Jeu de la Vie** de Conway sous Unity (C#, Input System, Tex
 - Grille de taille réglable (4 à 200 cellules par côté, 64 x 48 par défaut).
 - Deux modes de bord :
   - **Infinite** : la grille déborde sur une marge invisible de 2 cellules, où les cellules continuent de vivre.
-  - **Symetric** : la grille est un tore, les bords opposés sont reliés.
+  - **Symetric** : les bords opposés sont reliés.
 - Vitesse de simulation réglable (ticks par seconde), mode pas à pas.
 - Placement aléatoire, effacement de la grille.
 - Sauvegarde et chargement de plusieurs états au format PNG.
@@ -54,7 +54,6 @@ Chaque sauvegarde est une image PNG sans perte, où **1 pixel = 1 cellule** de l
 | Blanc (255, 255, 255) | Vivante |
 | Noir (0, 0, 0) | Morte |
 
-À la lecture, une cellule est vivante si le canal rouge du pixel est supérieur à 127. Une image dessinée à la main avec du gris clair ou du blanc fonctionne donc aussi.
 
 | Taille de l'image | Taille de la grille |
 |---|---|
