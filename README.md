@@ -67,8 +67,8 @@ Chaque sauvegarde est une image PNG sans perte, où **1 pixel = 1 cellule** de l
 ## Exemples
 
 Génération aléatoire :
-<img width="64" height="48" alt="Random" src="https://github.com/user-attachments/assets/ada7aca2-180a-44a1-bdc2-b2da537d8d50" />
+<img width="640" height="480" alt="Random" src="https://github.com/user-attachments/assets/ada7aca2-180a-44a1-bdc2-b2da537d8d50" />
 
 Glider :
-<img width="64" height="48" alt="Glider" src="https://github.com/user-attachments/assets/8de0bbe3-6682-4912-a5be-371648c51028" />
+<img width="640" height="480" alt="Glider" src="https://github.com/user-attachments/assets/8de0bbe3-6682-4912-a5be-371648c51028" />
 
